@@ -1,2 +1,2 @@
 # PYTHON
-## This repository contains all the notes & projects I create along with the practice sets I have done.
+## This repository contains all the  projects I create along with the practice sets I have done in python.
