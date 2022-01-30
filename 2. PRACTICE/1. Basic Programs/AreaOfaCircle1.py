@@ -4,4 +4,5 @@ print("Enter the radius of the circle:")
 radius = int(input())
 pi = 3.1415
 area = pi * radius * radius
-print("Area of the circle is: " + str(area))
+
+print("Area of the circle is: ",  (area))
