@@ -1,6 +1,7 @@
 # Dictionary in python
 
-colors = {'banana': 'yellow', 'apple': 'red', 'strawberry': 'red', 'grapes': 'purple', 'orange': 'orange'}
+colors = {'banana': 'yellow', 'apple': 'red',
+          'strawberry': 'red', 'grapes': 'purple', 'orange': 'orange'}
 
 print("\n The dictionary is: ", colors, "\n")
 
