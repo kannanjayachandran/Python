@@ -3,11 +3,11 @@
 letter = input("Enter the character to check: ")
 
 if letter.isupper():
-    print(letter, " is in Uppercase.")
+    print(letter, "is in Uppercase.")
 
 elif letter.islower():
-    print(" is in lowercase.")
+    print(letter, "is in lowercase.")
 else:
-    print("Invalid input")
+    print("Invalid input.")
 
 # isupper() and islower() are two built-in python functions which returns True or False if the string is in uppercase or lowecase.
