@@ -1,4 +1,4 @@
-# Find the n th Fibonacci number.
+# Find the n-th Fibonacci number.
 
 num = int(input("Enter the number: "))
 if num == 1 or num == 0:
