@@ -3,12 +3,11 @@
      *
      * *
      * * *
-     for given 'n = 3'
 '''
 
 n = int(input("Enter the number: "))
 
-for i in range(0, n+1):
-    for j in range(0, i):
-        print("* ", end='')
-    print()
+i = 1
+while i <= n:
+    print("* "*i)
+    i += 1
