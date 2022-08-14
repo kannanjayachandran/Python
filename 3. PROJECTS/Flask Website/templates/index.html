@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+    name="description"
+    content="This is a simple flask application using Python"/>
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" />
+
+    <title>Flask Python Application</title>
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <h1 id="logo">Hello world</h1>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Portfolio</a></li>
+            </ul>
+
+
+        </nav>
+
+        <div class="text-box">
+            <h1>Flask Python Application</h1>
+            <p>This is a simple flask application using Python</p>
+    </div>
+    </div>
+
+    <div class="second">
+        <div class="second-box">
+
+            <form action="greet" method="post">
+                {% for message in get_flashed_messages() %}
+                <p>{{message}}</p>
+                {% endfor %}
+                <br>
+                <input type="text" name="name_input">
+                <br>
+                <input type="submit" value="GREET" id="greet">
+      
+              </form>
+
+        </div>
+    
+</body>
+</html>
