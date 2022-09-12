@@ -4,4 +4,4 @@
 
 ![Bubble Sort](https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif)
 
-<img src="https://github.com/kannanjayachandran/Python/blob/b12d61ea893a03911d10b5ea968dcaa2090f1ff8/1.%20DATA%20STRUCTURES%20AND%20ALGORITHMS/Algorithms/Sorting/bubbleSort.png"/>
+<img src="https://github.com/kannanjayachandran/Python/blob/b12d61ea893a03911d10b5ea968dcaa2090f1ff8/1.%20DATA%20STRUCTURES%20AND%20ALGORITHMS/Algorithms/Sorting/bubbleSort.png" width="10%"/>
