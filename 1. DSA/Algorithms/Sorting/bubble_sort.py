@@ -1,27 +1,31 @@
-# Bubble sort in python
+'''
+    Implementing Bubble sort algorithm in python
+'''
 
-from random import randint
 
-lis = []
-for i in range(10):
-    lis.append(randint(1, 100))
+def bubble_Sort(arr: list[int], length: int) -> list[int]:
 
-print("The list before sorting is: ", lis)
+    for i in range(length):
 
-# Bubble sort Algorithm
-for i in range(len(lis)):
-    for j in range(len(lis) - i - 1):
-        if lis[j] > lis[j + 1]:
-            lis[j], lis[j + 1] = lis[j + 1], lis[j]
+        swapped = False
 
-print('\nAfter sorting the list is: ', lis)
+        for j in range(length-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
 
-"""
-Bubble sort also referred to as sinking sort is a simple sorting 
-algorithm that repeatedly steps through the list, compares adjacent 
-elements and swaps them if they are in the wrong order. The pass 
-through the list is repeated until the list is sorted.
+                swapped = True
 
-If the array is already sorted bubble sort would take O(n) time.
-O(N^2) is the worst time complexity.
-"""
+        if not swapped:
+            break
+
+    return arr
+
+
+if __name__ == '__main__':
+
+    userIn = input('Enter numbers separated by comma:\n').strip()
+    arr = [int(x.strip()) for x in userIn.split(',')]
+
+    length = len(arr)
+
+    print(f'The sorted sequence is:', bubble_Sort(arr, length))
