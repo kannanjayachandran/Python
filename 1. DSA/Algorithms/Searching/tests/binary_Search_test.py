@@ -1,3 +1,8 @@
+'''
+    Testing Binary search using pytest
+'''
+
+
 from binary_Search import binarySearch
 
 
