@@ -1,4 +1,4 @@
-import random as r
+import random
 
 MAX_LINES = 3
 
@@ -10,10 +10,10 @@ COLS = 3
 
 
 symbols_machine = {
-    "👑": 2,
-    "🪙": 4,
+    "👑 ": 2,
+    "🪙 ": 4,
     "💰": 6,
-    "💵": 8,
+    "💵 ": 8,
 }
 
 
@@ -24,19 +24,38 @@ def slot_spin(rows, cols, symbols_machine):
     for symbol, symbol_count in symbols_machine.items():
 
         for _ in range(symbol_count):
+
             available_symbols.append(symbol)
 
-    columns = [[], [], []]
+    columns = []
 
     for _ in range(cols):
         column = []
         current_symbol = available_symbols[:]
-        for row in range(rows):
-            value = r.choice(current_symbol)
+        for _ in range(rows):
+            value = random.choice(current_symbol)
             current_symbol.remove(value)
             column.append(value)
 
         columns.append(column)
+
+    return columns
+
+
+def print_slot_spin(columns):
+
+    for row in range(len(columns[0])):
+
+        for idx, col in enumerate(columns):
+
+            if idx != len(columns)-1:
+
+                print(col[row], end=" ")
+
+            else:
+                print(col[row], end=" ")
+
+        print()
 
 
 def mode_select():
@@ -133,13 +152,19 @@ def main():
 
     mode_choice = mode_select()
 
-    # getting deposit based on mode selected
-    account_balance = get_deposit_1 if mode_choice == 1 else get_deposit_2
+    if mode_choice == 1:
+        account_balance = get_deposit_1()
+    else:
+        account_balance = get_deposit_2()
+
+    # getting deposit based on mode selected using ternary but not working
+    # account_balance = get_deposit_1 if mode_choice == 1 else get_deposit_2
 
     lines = get_lines()
 
     while True:
         bet_amount = get_bet()
+
         total_bet = bet_amount * lines
 
         if total_bet >= account_balance:
@@ -147,8 +172,9 @@ def main():
                 f'You do not have enough money to bet {total_bet}. Your current balance is {account_balance}')
         else:
             break
-    print(f'You are betting {bet_amount} on {lines} lines.')
-    print(f'Total bet is = {total_bet}')
+
+    x = slot_spin(ROWS, COLS, symbols_machine)
+    print_slot_spin(x)
 
 
 main()
