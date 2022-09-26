@@ -16,6 +16,28 @@ symbols_machine = {
     "💵 ": 8,
 }
 
+symbol_values = {
+    "👑 ": 6,
+    "🪙 ": 5,
+    "💰": 5,
+    "💵 ": 2,
+}
+
+
+def slot_won(columns, lines, bet, values):
+
+    for line in range(lines):
+        winnings = 0
+        symbol = columns[0][line]
+        for column in columns:
+            symbol_to_check = column[line]
+            if symbol != symbol_to_check:
+                break
+        else:
+            winnings += values[symbol] * bet
+
+    return winnings
+
 
 def slot_spin(rows, cols, symbols_machine):
 

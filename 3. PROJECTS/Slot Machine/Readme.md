@@ -10,3 +10,7 @@ This is a simple slot machine game written in Python. **This is just a project; 
 
 1. Playing again
 2. Displaying the winnings
+
+### Reference
+
+[Tech with Tim](https://youtu.be/th4OBktqK1I)
