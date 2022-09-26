@@ -28,6 +28,7 @@ def slot_won(columns, lines, bet, values):
 
     for line in range(lines):
         winnings = 0
+        winnings_lines = []
         symbol = columns[0][line]
         for column in columns:
             symbol_to_check = column[line]
@@ -35,8 +36,9 @@ def slot_won(columns, lines, bet, values):
                 break
         else:
             winnings += values[symbol] * bet
+            winnings_lines.append(line+1)
 
-    return winnings
+    return winnings, winnings_lines
 
 
 def slot_spin(rows, cols, symbols_machine):
@@ -170,18 +172,7 @@ def get_bet():
     return bet_Money
 
 
-def main():
-
-    mode_choice = mode_select()
-
-    if mode_choice == 1:
-        account_balance = get_deposit_1()
-    else:
-        account_balance = get_deposit_2()
-
-    # getting deposit based on mode selected using ternary but not working
-    # account_balance = get_deposit_1 if mode_choice == 1 else get_deposit_2
-
+def game(account_balance):
     lines = get_lines()
 
     while True:
@@ -197,6 +188,33 @@ def main():
 
     x = slot_spin(ROWS, COLS, symbols_machine)
     print_slot_spin(x)
+    winnings, winnings_lines = slot_won(x, lines, bet_amount, symbol_values)
+    print(f'You won {winnings}')
+    print('You won on lines ', *winnings_lines)
+
+    return winnings - total_bet
+
+
+def main():
+
+    mode_choice = mode_select()
+
+    if mode_choice == 1:
+        account_balance = get_deposit_1()
+    else:
+        account_balance = get_deposit_2()
+
+    # getting deposit based on mode selected using ternary but not working
+    # account_balance = get_deposit_1 if mode_choice == 1 else get_deposit_2
+    while True:
+        print(f'Current balance is {account_balance}')
+        answer = input("Press enter to play or q to quit : ")
+        if answer.lower() == 'q':
+            break
+
+        account_balance += game(account_balance)
+
+    print(f'Your balance is {account_balance}')
 
 
 main()
