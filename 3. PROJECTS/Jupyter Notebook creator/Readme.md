@@ -19,3 +19,15 @@ The script would create a folder with the name Jupyter Notebooks and create a Ju
 
 - [ ] Consoliadte the code into a single function and call it from main.
 - [ ] Add a GUI.
+
+## Contributing
+
+- Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Author
+
+[Kannan Jayachandran](https://github.com/kannanjayachandran)
