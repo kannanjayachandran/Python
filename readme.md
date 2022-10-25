@@ -1,6 +1,6 @@
-# PYTHON Folder
+# Python ~ Folder
 
-## This repository contains all the Practice programs, Minor projects, DSA (Python implementation)
+**This repository contains all the Practice programs, Minor projects, DSA (Python implementation)**
 
 ## Table of Contents
 
