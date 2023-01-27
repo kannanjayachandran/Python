@@ -1,7 +1,11 @@
-# Python ~ Folder
+<div align="center">
 
-**This repository contains all the Practice programs, Minor projects, DSA (Python implementation)**
+# Python Practice Folder
 
+</div>
+
+> This folder contains all the practice programs and minor projects that I have done in Python. It also contains the data structures and algorithms that I have implemented in Python.
+>
 ## Table of Contents
 
 1. [Data Structures and Algorithms](./1.%20DATA%20STRUCTURES%20AND%20ALGORITHMS/)
