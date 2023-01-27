@@ -2,6 +2,9 @@
 
 # Python Practice Folder
 
+![Language](https://img.shields.io/badge/Language-python-blue.svg)
+![Code style](https://img.shields.io/badge/Code%20Style-Standard-brightgreen.svg)
+
 </div>
 
 > This folder contains all the practice programs and minor projects that I have done in Python. It also contains the data structures and algorithms that I have implemented in Python.
