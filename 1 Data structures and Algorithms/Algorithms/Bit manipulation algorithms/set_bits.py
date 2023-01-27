@@ -1,7 +1,11 @@
-
-
 def set_bits(num: int, k: int)->int:
+    """
+    Method Name: set_bit
+    
+    Purpose: To set the k-th bit of a number
 
+    Output: Resulting number after setting the k-th bit
+    """
     return num | (1<<k)
 
 
@@ -13,8 +17,6 @@ if __name__ == '__main__':
     print(f'The num {num} after setting {k}-th bit is : {set_bits(num, k)}')
 
 
-
-# Algorithm : To set the k-th bit of a number
 
 # Time complexity : O(1)
 
