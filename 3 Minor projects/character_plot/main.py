@@ -1,30 +1,33 @@
 import matplotlib.pyplot as plt
 
-para = ''' Python is a general-purpose interpreted, interactive, object-oriented, and high-level 
-programming language. It was created by Guido van Rossum during 1985- 1990. Like Perl, Python source 
-code is also available under the GNU General Public License (GPL). This tutorial gives enough understanding 
-on Python programming language.
-Python is a MUST for students and working professionals to become a great Software Engineer specially when 
-they are working in Web Development Domain. I will list down some of the key advantages of learning Python:
-'''
 
-counter = {}
+def main():
 
-for letter in para:
-    counter[letter.lower()] = counter.get(letter, 0) + 1
+    sentence = """
+                Python is a high-level, general-purpose programming language. Its design philosophy emphasizes 
+                code readability with the use of significant indentation. Python is dynamically typed and 
+                garbage-collected. It supports multiple programming paradigms, including structured, object-oriented 
+                and functional programming
+                """
+    counter = {}
+    for letter in sentence:
+        counter[letter.lower()] = counter.get(letter, 0) + 1
 
-x, y = zip(*counter.items())
-plt.bar(x, y)
-plt.show()
+    x_value, y_value = zip(*counter.items())
+    plt.bar(x_value, y_value)
+    plt.show()
 
-counter_clean = {}
-for key, value in counter.items():
-    if key.isalpha():
-        counter_clean[key] = value
+    counter_clean = {}
+    for key, value in counter.items():
+        if key.isalpha():
+            counter_clean[key] = value
 
-x, y = zip(*counter_clean.items())
+    x_value, y_value = zip(*counter_clean.items())
 
-plt.plot(x, y, color='blue', marker='o', linestyle='dotted',
-     linewidth=2, markersize=8)
-plt.show()
+    plt.plot(x_value, y_value, color='blue', marker='o', linestyle='dotted',
+        linewidth=2, markersize=8)
+    plt.show()
 
+
+if __name__ == '__main__':
+    main()
