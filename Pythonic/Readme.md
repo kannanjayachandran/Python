@@ -10,13 +10,16 @@
 | 2 | Dictionary Comprehension | [Link](/0.%20Python%20Basics/dictionaryComprehension.py) |
 | 3 | Generator | [Link](/0.%20Python%20Basics/generators.py) |
 
-## TODO
 
-1. Built-in function
-2. Lambda Function
-3. Iteration
-4. Generator
-5. Unpacking
-6. Enumerate
-7. Zip
-8. Ternary Operator
+## Python one-liners
+
+<details>
+
+<summary>
+Check whether the given number is palindrome or not ?</summary>
+
+```python
+print(str(num) == str(num)[::-1])
+```
+
+</details>
